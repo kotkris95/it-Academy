@@ -1,7 +1,7 @@
 public class Task5 {
     public static void main(String[] args) {
-        int x = -9;
-        int y = 3;
+        int x = 0;
+        int y = 1;
 
         if(x>0 && y>0){
             System.out.println("Quarter I");

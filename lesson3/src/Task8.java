@@ -2,24 +2,24 @@ public class Task8 {
     public static void main(String[] args) {
         int dayOfYear = 360;
         int  numberOfMonth = dayOfYear / 28 + 1;
-        int date = dayOfYear%28;
+        int dayOfMonth = dayOfYear%28;
         int dayOfWeek = dayOfYear%7;
 
-        if(dayOfYear > 364) {
+        if(dayOfYear > 364 && dayOfYear < 0) {
             System.out.println("Not a day of the year!");
         } else {
-            System.out.println("The " + date + "th " + getMonth(numberOfMonth) + ", "
+            System.out.println("The " + dayOfMonth + "th " + getMonth(numberOfMonth) + ", "
                     + getDayOfWeek(dayOfWeek) + ".");
             System.out.println(getWeekendOrWeekday(dayOfWeek));
         }
 
         int numberOfMonth1 = 13;
-        int dayOfMonth = 24;
-        int dayOfWeek1 = dayOfMonth%7;
-        if(dayOfMonth > 28){
+        int dayOfMonth1 = 24;
+        int dayOfWeek1 = dayOfMonth1%7;
+        if(dayOfMonth1 > 28){
             System.out.println("Not a day of the month!");
         } else {
-            System.out.println("The " + dayOfMonth + "th " + getMonth(numberOfMonth1) + ", "
+            System.out.println("The " + dayOfMonth1 + "th " + getMonth(numberOfMonth1) + ", "
                     + getDayOfWeek(dayOfWeek1) + ".");
             System.out.println(getWeekendOrWeekday(dayOfWeek1));
         }

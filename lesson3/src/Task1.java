@@ -5,7 +5,7 @@ public class Task1 {
         int z = 6;
 
         if(x > z){
-            System.out.println((x+y)/2);
+            System.out.println((x+y)/2.0);
         } else {
             System.out.println(z);
         }
