@@ -1,9 +1,9 @@
 public class Task1 {
     public static void main(String[] args) {
-        int [] array  = new int[10];
+        double [] array  = new double[10];
 
         for (int i = 0; i < array.length; i++){
-            array[i] = (int) (Math.random() * 10);
+            array[i] =  Math.random() * 10;
             System.out.print(array[i] + " ");
         }
 
@@ -14,8 +14,8 @@ public class Task1 {
     }
 
 
-     static int maxInt(int[] array) {
-        int max = array[0];
+     static double maxInt(double[] array) {
+         double max = array[0];
         for (int i = 1; i <array.length; i++) {
             if(array[i]>max){
                 max = array[i];
@@ -24,8 +24,8 @@ public class Task1 {
         return max;
     }
 
-    static int minInt(int[] array) {
-        int min = array[0];
+    static double minInt(double[] array) {
+        double min = array[0];
         for (int i = 1; i <array.length; i++) {
             if(array[i]<min){
                 min = array[i];
@@ -34,7 +34,7 @@ public class Task1 {
         return min;
     }
 
-    static double sumInt(int[]array){
+    static double sumInt(double[]array){
         double sum = array[0];
         for (int i = 1; i < array.length-1; i++) {
             sum+=array[i];
