@@ -2,18 +2,18 @@ import java.util.Arrays;
 
 public class Task6 {
     public static void main(String[] args) {
-        int [][] array = new int[5][3];
+        int[][] array = new int[5][3];
 
         for (int[] ints : array) {
             Arrays.fill(ints, 1);
         }
         Task4.print(array);
         System.out.println();
-        int [][] newArray = getNewArray(array);
+        int[][] newArray = getNewArray(array);
         Task4.print(newArray);
     }
 
-    static int[][] getNewArray(int[][]array) {
+    static int[][] getNewArray(int[][] array) {
         int[][] newArray = new int[array[0].length][];
         for (int i = 0; i < newArray.length; i++) {
             newArray[i] = getChanges(array, i);
@@ -21,22 +21,16 @@ public class Task6 {
         return newArray;
     }
 
-    static int[] getChanges(int [][]array, int value) {
-        int [] array1 = new int[0];
-        int number = 0;
+    static int[] getChanges(int[][] array, int value) {
         int count = 0;
         for (int[] ints : array) {
-            for (int j = 0; j < ints.length; j++) {
-            }
             count++;
         }
-        array1 = new int[count];
-        for (int i = 0; i < array1.length; i++) {
-            array1[i] = array[number][value];
-            number++;
+        int[] arrayOut = new int[count];
+        for (int i = 0; i < arrayOut.length; i++) {
+            arrayOut[i] = array[i][value];
         }
-        return array1;
-
-        }
+        return arrayOut;
     }
+}
 
