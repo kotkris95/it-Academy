@@ -1,29 +1,27 @@
 package task5;
 
 
-import java.util.Arrays;
-
 public class ShoppingCart {
-    private Product[] purchasedGoods;
+    private String[] purchasedGoods;
     private int[] countOfProducts;
     private int count;
 
     public ShoppingCart(int size) {
-        purchasedGoods = new Product[size];
+        purchasedGoods = new String[size];
         countOfProducts = new int[size];
         count = 0;
     }
 
-    public boolean add(Product product) {
+    public boolean add(String nameOfProduct) {
         if (count >= purchasedGoods.length) {
-            System.out.println("Корзина заполнена!");
-        } else if (!(isSameProduct(product))) {
-            purchasedGoods[count] = product;
+            System.out.println("Корзина заполнена! Товар " + nameOfProduct + " не добавлен.");
+        } else if (!(isSameProduct(nameOfProduct))) {
+            purchasedGoods[count] = nameOfProduct;
             countOfProducts[count] = 1;
             count++;
         } else {
             for (int i = 0; i <= count; i++) {
-                if (purchasedGoods[i] != null && purchasedGoods[i].equals(product)) {
+                if (purchasedGoods[i] != null && purchasedGoods[i].equals(nameOfProduct)) {
                     countOfProducts[i]++;
                 }
             }
@@ -32,17 +30,16 @@ public class ShoppingCart {
     }
 
 
-    private boolean isSameProduct(Product product) {
+    private boolean isSameProduct(String nameOfProduct) {
         for (int i = 0; i < purchasedGoods.length; i++) {
-            if (purchasedGoods[i] != null && purchasedGoods[i].equals(product)) {
+            if (purchasedGoods[i] != null && purchasedGoods[i].equals(nameOfProduct)) {
                 return true;
             }
         }
         return false;
     }
 
-    @Override
-    public String toString() {
+    public String print() {
         String s = "";
         for (int i = 0; i < purchasedGoods.length; i++) {
             if (purchasedGoods[i] != null) {
