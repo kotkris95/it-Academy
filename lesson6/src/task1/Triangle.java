@@ -4,6 +4,10 @@ public class Triangle {
     int a;
     int b;
     int c;
+    static final int EQUILATERAL_TYPE = 1;
+    static final int ISOSCELES_TYPE = 2;
+    static final int RIGHT_TYPE = 3;
+
 
     Triangle(int a, int b, int c) {
         this.a = a;
@@ -22,13 +26,13 @@ public class Triangle {
 
     public int getTypeOfTriangle() {
         if (a == b && c == b) {
-            return 1; //равносторонний треугольник
+            return EQUILATERAL_TYPE; //равносторонний треугольник
         } else if ((a == b && !(a == c)) || (c == b && !(a == c)) || (a == c && !(a == b))) {
-            return 2; //равнобедренный треугольник
+            return ISOSCELES_TYPE; //равнобедренный треугольник
         } else if (Math.pow(a, 2) == (Math.pow(b, 2) + Math.pow(c, 2)) ||
                 Math.pow(b, 2) == (Math.pow(a, 2) + Math.pow(c, 2)) ||
                 Math.pow(c, 2) == (Math.pow(b, 2) + Math.pow(a, 2))
-        ) return 3; //прямоугольный треугольник
+        ) return RIGHT_TYPE; //прямоугольный треугольник
         else return 0;
     }
 
