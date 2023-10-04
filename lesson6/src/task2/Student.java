@@ -11,8 +11,6 @@ public class Student {
     String faculty;
     int course;
     int group;
-    Student student;
-    Student[] students;
 
     public Student(int id, String name, String surname, String patronymic, int yearOfBirth,
                    String faculty, int course, int group) {
@@ -55,55 +53,19 @@ public class Student {
         this.group = group;
     }
 
-    public static void getFaculty(Student[] students, String value) {
-        System.out.println("Студенты " + value + " факультета: ");
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].faculty.equals(value)) {
-                System.out.println(students[i].toString());
-            }
-        }
-    }
-
-    public static void getFacultyAndCourse(Student[] students, String value, int c) {
-        System.out.println("Студенты " + value + " факультета " + c + " курса: ");
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].faculty.equals(value) && students[i].course == c) {
-                System.out.println(students[i].toString());
-            }
-        }
-    }
-
-    public static void bornAfter(Student[] students, int y) {
-        System.out.println("СтудентыБ родившиеся после  " + y + " года: ");
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].yearOfBirth > y) {
-                System.out.println(students[i].toString());
-            }
-        }
-    }
-
-    public static void getCourse(Student[] students, int c) {
-        System.out.println("Список студентов " + c + " группы: ");
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].group == c) {
-                System.out.println(students[i].toString());
-            }
-        }
-    }
-
     @Override
     public String toString() {
-        return "task2.Student{" +
+        return "Студент{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", patronymic='" + patronymic + '\'' +
-                ", yearOfBirth=" + yearOfBirth +
-                ", address='" + address + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                ", faculty='" + faculty + '\'' +
-                ", course=" + course +
-                ", group=" + group +
+                ", фамилия: '" + name + '\'' +
+                ", имя: '" + surname + '\'' +
+                ", отчество: '" + patronymic + '\'' +
+                ", год рождения: " + yearOfBirth +
+                ", адрес: '" + address + '\'' +
+                ", номер телефона: " + phoneNumber +
+                ", факультет: '" + faculty + '\'' +
+                ", курс: " + course +
+                ", группа: " + group +
                 '}';
     }
 }
