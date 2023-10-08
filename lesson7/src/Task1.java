@@ -13,8 +13,8 @@ public class Task1 {
 
     public static boolean isPalindrom(String text) {
         String s = text.toLowerCase().replaceAll("\\s", "").replaceAll("[-.?!,:]", "").toLowerCase().trim();
-        StringBuilder sb = new StringBuilder(text);
-        text = sb.reverse().toString().replaceAll("\\s", "").replaceAll("[-.?!,:]", "").toLowerCase().trim();
+        StringBuilder sb = new StringBuilder(s);
+        text = sb.reverse().toString().toLowerCase().trim();
         return text.equals(s);
     }
 }
