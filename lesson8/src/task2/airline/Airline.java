@@ -1,16 +1,34 @@
 package task2.airline;
 
-import task2.airTransport.AirTransport;
+import task2.transport.AirTransport;
+import task2.transport.airplane.AirplaneIL62;
+import task2.transport.airplane.AirplaneTu134;
+import task2.transport.helicopter.HelicopterKa226;
+import task2.transport.helicopter.HelicopterMi54;
+import task2.transport.quadcopter.Quadcopter1;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
 
 public class Airline {
-    private final AirTransport[] airTransports;
+    private AirTransport[] airTransports;
+    int count;
 
-    public Airline(AirTransport[] airTransports) {
-        this.airTransports = airTransports;
+    public Airline(int size) {
+        airTransports = new AirTransport[size];
+        count = 0;
+    }
+
+    public AirTransport[] getAirTransports() {
+        return Arrays.copyOf(airTransports, count);
+    }
+
+    public void addAirTransport(AirTransport airTransport) {
+        if (count < airTransports.length) {
+            airTransports[count] = airTransport;
+            count++;
+        }
     }
 
     public int calculateTotalCapacity() {
@@ -50,6 +68,4 @@ public class Airline {
                 "airTansports=" + Arrays.toString(airTransports) +
                 '}';
     }
-
-
 }
