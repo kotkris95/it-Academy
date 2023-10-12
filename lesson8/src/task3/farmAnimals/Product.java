@@ -1,14 +1,20 @@
 package task3.farmAnimals;
 
 public class Product {
-    String nameOfProduct;
+    String name;
+    public static final Product EGG = new Product("Яйцо");
+    public static final Product MEAT = new Product("Мясо");
+    public static final Product CHEESE = new Product("Сыр");
+    public static final Product COTTAGE_CHEESE = new Product("Творог");
+    public static final Product SOUR_CREAM = new Product("Сметана");
+    public static final Product SKIN = new Product("Шкура");
+    public static final Product FAT = new Product("Жир");
 
-    public Product(String nameOfProduct) {
-        this.nameOfProduct = nameOfProduct;
+    private Product(String name) {
+        this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return nameOfProduct;
+    public String getName() {
+        return name;
     }
 }

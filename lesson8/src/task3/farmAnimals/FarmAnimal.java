@@ -1,11 +1,11 @@
 package task3.farmAnimals;
 
-public abstract class FarmAnimals implements AmountOfProducts {
+public abstract class FarmAnimal {
     String kindOfAnimal;
     int numberOfAnimals;
     Product[] products;
 
-    public FarmAnimals(String kindOfAnimal, int numberOfAnimals, Product[] products) {
+    public FarmAnimal(String kindOfAnimal, int numberOfAnimals, Product[] products) {
         this.kindOfAnimal = kindOfAnimal;
         this.numberOfAnimals = numberOfAnimals;
         this.products = products;
@@ -18,4 +18,6 @@ public abstract class FarmAnimals implements AmountOfProducts {
     public Product[] getProducts() {
         return products;
     }
+
+    public abstract void printNumberOfProducts(int i);
 }
