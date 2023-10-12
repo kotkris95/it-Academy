@@ -1,7 +1,7 @@
 package task3.farmAnimals;
 
 public class Product {
-    String name;
+    private String name;
     public static final Product EGG = new Product("Яйцо");
     public static final Product MEAT = new Product("Мясо");
     public static final Product CHEESE = new Product("Сыр");
