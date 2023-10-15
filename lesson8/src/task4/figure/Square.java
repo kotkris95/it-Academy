@@ -11,6 +11,7 @@ public class Square extends Figure {
         a = random.nextInt(10);
     }
 
+
     @Override
     public double calculatePerimeter() {
         return 4 * a;

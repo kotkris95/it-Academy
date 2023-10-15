@@ -5,8 +5,6 @@ import task4.material.Material;
 
 public abstract class Figure {
     String typeOfFigure;
-    Color color;
-    Material material;
 
     public Figure(String typeOfFigure) {
         this.typeOfFigure = typeOfFigure;

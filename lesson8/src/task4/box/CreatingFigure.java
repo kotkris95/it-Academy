@@ -13,9 +13,34 @@ import task4.material.PlasticFilm;
 import java.util.Random;
 
 public class CreatingFigure {
-    Color color;
-    public Figure figure;
-    Material material;
+    private Color color;
+    private Figure figure;
+
+    public void setFigure(Figure figure) {
+        this.figure = figure;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public Figure getFigure() {
+        return figure;
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    private Material material;
 
     public CreatingFigure() {
         this.figure = creatingFigure();
@@ -61,8 +86,8 @@ public class CreatingFigure {
 
     @Override
     public String toString() {
-        return "Фигура: " + figure +
-                " цвет: " + color +
-                ", материал: " + material;
+        return "Фигура: " + getFigure() +
+                " цвет: " + getColor() +
+                ", материал: " + getMaterial();
     }
 }

@@ -20,4 +20,5 @@ public class Circle extends Figure {
     public double calculateArea() {
         return 3.14 * Math.pow(radius, 2);
     }
+
 }

@@ -7,6 +7,7 @@ public class Triangle extends Figure {
     int b;
     int c;
 
+
     public Triangle() {
         super("Треугольник");
         Random random = new Random();

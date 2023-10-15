@@ -4,4 +4,5 @@ public class Blue extends Color {
     public Blue() {
         super("Синий");
     }
+
 }
