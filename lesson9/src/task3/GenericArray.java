@@ -2,9 +2,9 @@ package task3;
 
 import java.util.Iterator;
 
-public class GenericArray<E> implements Iterator<E> {
+
+public class GenericArray<E> implements Iterable<E> {
     private final E[] genericArray;
-    private int count = 0;
 
     public GenericArray(E[] genericArray) {
         this.genericArray = genericArray;
@@ -18,16 +18,26 @@ public class GenericArray<E> implements Iterator<E> {
         return genericArray[index];
     }
 
-    @Override
-    public boolean hasNext() {
-        return count < genericArray.length;
-    }
 
     @Override
-    public E next() {
-        if (!hasNext()) {
-            return null;
-        }
-        return genericArray[count++];
+    public Iterator<E> iterator() {
+        return new MyIterator();
     }
+
+     class MyIterator implements Iterator<E>{
+         private int count = 0;
+
+         @Override
+         public boolean hasNext() {
+             return count < genericArray.length;
+         }
+
+         @Override
+         public E next() {
+             if (!hasNext()) {
+                 return null;
+             }
+             return genericArray[count++];
+         }
+     }
 }
