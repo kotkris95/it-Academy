@@ -9,20 +9,13 @@ public class Pair<T, E> {
         this.last = e;
     }
 
-    public T getT() {
+
+    public T first() {
         return first;
     }
 
-    public E getE() {
+    public E last() {
         return last;
-    }
-
-    public T first(T t, E e) {
-        return t;
-    }
-
-    public E last(T t, E e) {
-        return e;
     }
 
     public Pair<E, T> swap() {
